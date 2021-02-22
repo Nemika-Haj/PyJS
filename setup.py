@@ -1,8 +1,12 @@
-from distutils.core import setup
+from setuptools import setup
+
+with open("README.md", "r") as f:
+  readme = f.read()
+
 setup(
   name = 'Python.js',
   packages = ['PyJS'],
-  version = '0.1',
+  version = '1.0.0',
   license='MIT',
   description = 'A python library for people who prefer JavaScript\'s way of handling things.',
   author = 'Nemika',
@@ -10,8 +14,8 @@ setup(
   url = 'https://github.com/Nemika-Haj/PyJS',
   download_url = 'https://github.com/Nemika-Haj/PyJS/archive/0.1.tar.gz',
   keywords = ['pyjs', 'javascript', 'python', 'js', 'py.js', "python.js", "python js"],
-  long_description="README.md",
-  long_description_content_type="text/md",
+  long_description=readme,
+  long_description_content_type="text/markdown",
   install_requires=[
           'forbiddenfruit',
       ],
