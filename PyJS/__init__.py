@@ -1,8 +1,7 @@
-__version__ = "1.0.0"
+__version__ = "1.0.7"
 
-import core.arrayMethods
-import core.stringMethods
-import core.numberMethods
-from core import console
-from core.convertions import *
-
+from .console import *
+from .arrayMethods import *
+from .numberMethods import *
+from .stringMethods import *
+from .convertions import *
