@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 setup(
   name = 'Python.js',
   packages = ['PyJS', 'PyJS.modules'],
-  version = '1.0.7',
+  version = '1.0.8',
   license='MIT',
   description = 'A python library for people who prefer JavaScript\'s way of handling things.',
   author = 'Nemika',
