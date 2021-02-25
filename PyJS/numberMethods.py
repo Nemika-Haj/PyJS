@@ -1,22 +1,25 @@
 import forbiddenfruit as ff
 
+@ff.curses(float, "toString")
+@ff.curses(int, "toString")
+@ff.curses(complex, "toString")
 def num_toString(self) -> str:
     return str(self)
 
+@ff.curses(float, "toExponential")
+@ff.curses(int, "toExponential")
+@ff.curses(complex, "toExponential")
 def num_toExponential(self, N=1) -> str:
     return format(self, f'0.{N}e')
 
+@ff.curses(float, "toFixed")
+@ff.curses(int, "toFixed")
+@ff.curses(complex, "toFixed")
 def num_toFixed(self, N=1) -> str:
     return format(self, f"0.{N}f")
 
+@ff.curses(float, "valueOf")
+@ff.curses(int, "valueOf")
+@ff.curses(complex, "valueOf")
 def num_valueOf(self):
     return self
-
-ff.curse(float, "toString", num_toString)
-ff.curse(int, "toString", num_toString)
-ff.curse(int, "toExponential", num_toExponential)
-ff.curse(float, "toExponential", num_toExponential)
-ff.curse(int, "toFixed", num_toFixed)
-ff.curse(float, "toFixed", num_toFixed)
-ff.curse(int, "valueOf", num_valueOf)
-ff.curse(float, "valueOf", num_valueOf)
